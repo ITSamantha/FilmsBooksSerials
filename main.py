@@ -28,6 +28,7 @@ class WorkWithApplication(QtWidgets.QMainWindow):
             lambda ch, btn=self.ui.serialsButton: self.button_clicked(btn.text()))
 
 
+
     def button_clicked(self, value):
         if value == "Books":
             self.ui.pages.setCurrentIndex(2)
