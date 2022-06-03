@@ -2,6 +2,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
 import sys
 
+from PyQt5.QtWidgets import QTableWidgetItem
+
+import ControllerForDB
 from mainform import Ui_MainWindow as MyWindow
 
 # Constants
@@ -38,5 +41,14 @@ class WorkWithApplication(QtWidgets.QMainWindow):
 
 app = QtWidgets.QApplication([])
 application = WorkWithApplication()
+contr = ControllerForDB.ControllerForDB()
+contr.ConnectToDB()
+rec = contr.example()
+print(rec)
+application.ui.books_table.insertRow(0)
+for i in range(0, len(rec[0])):
+    application.ui.books_table.setItem(0,i , QTableWidgetItem(str(rec[0][i])))
+    print(str(rec[0][i]))
+
 application.show()
 sys.exit(app.exec())
