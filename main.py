@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication
 import sys
 
 from mainform import Ui_MainWindow as MyWindow
@@ -26,7 +25,6 @@ class WorkWithApplication(QtWidgets.QMainWindow):
             lambda ch, btn=self.ui.filmsButton: self.button_clicked(btn.text()))
         self.ui.serialsButton.clicked.connect(
             lambda ch, btn=self.ui.serialsButton: self.button_clicked(btn.text()))
-
 
 
     def button_clicked(self, value):

@@ -228,7 +228,7 @@ border-radius:5px
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="welcome_page">
      <widget class="QLabel" name="photo">
@@ -308,7 +308,7 @@ border-radius:5px
        <string>Serials</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="film_table_2">
+     <widget class="QTableWidget" name="serials_table">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -337,10 +337,10 @@ border-radius:5px
        <number>0</number>
       </property>
       <property name="columnCount">
-       <number>5</number>
+       <number>6</number>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>170</number>
+       <number>140</number>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>50</number>
@@ -415,6 +415,20 @@ border-radius:5px
         </font>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
      </widget>
     </widget>
     <widget class="QWidget" name="books">
@@ -467,10 +481,10 @@ border-radius:5px
        <number>0</number>
       </property>
       <property name="columnCount">
-       <number>5</number>
+       <number>6</number>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>170</number>
+       <number>142</number>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>50</number>
@@ -545,6 +559,20 @@ border-radius:5px
         </font>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
      </widget>
     </widget>
     <widget class="QWidget" name="films">
@@ -597,10 +625,10 @@ border-radius:5px
        <number>0</number>
       </property>
       <property name="columnCount">
-       <number>6</number>
+       <number>7</number>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>142</number>
+       <number>122</number>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>50</number>
@@ -678,6 +706,20 @@ border-radius:5px
       <column>
        <property name="text">
         <string>Picture</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
        </property>
        <property name="font">
         <font>
