@@ -166,6 +166,8 @@ class Ui_MainWindow(object):
         self.serials_table.setObjectName("serials_table")
         self.serials_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.serials_table.verticalHeader().setVisible(False)
+        # DO NOT ALLOW TO EDIT
+        self.serials_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -267,6 +269,8 @@ class Ui_MainWindow(object):
         self.books_table.setObjectName("books_table")
         self.books_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.books_table.verticalHeader().setVisible(False)
+        #DO NOT ALLOW TO EDIT
+        self.books_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -364,6 +368,8 @@ class Ui_MainWindow(object):
         self.film_table.setObjectName("film_table")
         self.film_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.film_table.verticalHeader().setVisible(False)
+        # DO NOT ALLOW TO EDIT
+        self.film_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
