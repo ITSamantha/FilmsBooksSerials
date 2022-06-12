@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QIcon
 import sys
 
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QCheckBox, QTableWidget
 
 import ControllerForDB
 from mainform import Ui_MainWindow as MyWindow
@@ -41,8 +41,15 @@ class WorkWithApplication(QtWidgets.QMainWindow):
             for i in result:
                 self.ui.books_table.insertRow(row_c)
                 for j in range(len(i)):
-                    self.ui.books_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                    if j == 4:
+                        check = QCheckBox()
+                        check.setChecked(i[j])
+                        check.setStyleSheet('background-color:none;')
+                        self.ui.books_table.setCellWidget(row_c, j, check)
+                    else:
+                        self.ui.books_table.setItem(row_c, j,  QTableWidgetItem(str(i[j])))
                 row_c += 1
+            QTableWidget.resizeColumnsToContents(self.ui.books_table)
         elif value == "Films":
             self.ui.pages.setCurrentIndex(3)
             if self.ui.film_table.rowCount() != 0:
@@ -52,8 +59,15 @@ class WorkWithApplication(QtWidgets.QMainWindow):
             for i in result:
                 self.ui.film_table.insertRow(row_c)
                 for j in range(len(i)):
-                    self.ui.film_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                    if j == 4:
+                        check = QCheckBox()
+                        check.setStyleSheet('background-color:none;')
+                        check.setChecked(i[j])
+                        self.ui.film_table.setCellWidget(row_c, j, check)
+                    else:
+                        self.ui.film_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
                 row_c += 1
+            QTableWidget.resizeColumnsToContents(self.ui.film_table)
         else:
             self.ui.pages.setCurrentIndex(1)
             if self.ui.serials_table.rowCount() != 0:
@@ -63,8 +77,16 @@ class WorkWithApplication(QtWidgets.QMainWindow):
             for i in result:
                 self.ui.serials_table.insertRow(row_c)
                 for j in range(len(i)):
-                    self.ui.serials_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                    if j == 4:
+                        check = QCheckBox()
+                        check.setStyleSheet('background-color:none;')
+                        check.setChecked(i[j])
+                        self.ui.serials_table.setCellWidget(row_c, j, check)
+                    else:
+                        self.ui.serials_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+
                 row_c += 1
+            QTableWidget.resizeColumnsToContents(self.ui.serials_table)
 
 
 
