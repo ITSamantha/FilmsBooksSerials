@@ -228,7 +228,7 @@ border-radius:5px
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="welcome_page">
      <widget class="QLabel" name="photo">
@@ -311,27 +311,36 @@ border-radius:5px
      <widget class="QTableWidget" name="serials_table">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>10</x>
         <y>70</y>
-        <width>861</width>
+        <width>881</width>
         <height>531</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Times New Roman</family>
-        <pointsize>16</pointsize>
+        <pointsize>14</pointsize>
         <italic>true</italic>
        </font>
       </property>
       <property name="styleSheet">
        <string notr="true">border:0px</string>
       </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
       </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
+      </property>
       <property name="gridStyle">
        <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
       </property>
       <property name="rowCount">
        <number>0</number>
@@ -340,7 +349,7 @@ border-radius:5px
        <number>6</number>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>140</number>
+       <number>145</number>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>50</number>
@@ -352,7 +361,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -366,7 +375,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -380,7 +389,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -394,7 +403,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -408,7 +417,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -422,13 +431,65 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
         </font>
        </property>
       </column>
+     </widget>
+     <widget class="QPushButton" name="serials_delB">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/delete.png</normaloff>images/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="serials_addB">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/add.png</normaloff>images/add.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="books">
@@ -455,16 +516,16 @@ border-radius:5px
      <widget class="QTableWidget" name="books_table">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>10</x>
         <y>70</y>
-        <width>861</width>
+        <width>881</width>
         <height>531</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Times New Roman</family>
-        <pointsize>16</pointsize>
+        <pointsize>14</pointsize>
         <italic>true</italic>
        </font>
       </property>
@@ -473,6 +534,9 @@ border-radius:5px
       </property>
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
       </property>
       <property name="gridStyle">
        <enum>Qt::SolidLine</enum>
@@ -484,7 +548,7 @@ border-radius:5px
        <number>6</number>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>142</number>
+       <number>145</number>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>50</number>
@@ -496,7 +560,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -510,7 +574,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -524,7 +588,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -538,7 +602,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -552,7 +616,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -566,13 +630,65 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
         </font>
        </property>
       </column>
+     </widget>
+     <widget class="QPushButton" name="books_addB">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/add.png</normaloff>images/add.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="books_delB">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/delete.png</normaloff>images/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="films">
@@ -608,7 +724,7 @@ border-radius:5px
       <property name="font">
        <font>
         <family>Times New Roman</family>
-        <pointsize>16</pointsize>
+        <pointsize>14</pointsize>
         <italic>true</italic>
        </font>
       </property>
@@ -617,6 +733,9 @@ border-radius:5px
       </property>
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
       </property>
       <property name="gridStyle">
        <enum>Qt::SolidLine</enum>
@@ -640,7 +759,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -654,7 +773,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -668,7 +787,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -682,7 +801,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -696,7 +815,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -710,7 +829,7 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
@@ -724,13 +843,65 @@ border-radius:5px
        <property name="font">
         <font>
          <family>Times New Roman</family>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <italic>true</italic>
          <bold>true</bold>
         </font>
        </property>
       </column>
+     </widget>
+     <widget class="QPushButton" name="films_addB">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/add.png</normaloff>images/add.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="films_delB">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/delete.png</normaloff>images/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
      </widget>
     </widget>
    </widget>

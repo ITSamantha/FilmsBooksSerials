@@ -1,25 +1,32 @@
-import psycopg2 as bd
+import sqlite3
+from sqlite3 import Error
+
+PATH = "DataBase/projectDB"
 
 
 class ControllerForDB(object):
-    # Constants
-    DB_NAME = 'FilmsBooksSerials'
-    DB_USER = 'postgres'
-    DB_PASSWORD = '01dr10kv'
-    DB_HOST = 'localhost'
 
-    def ConnectToDB(self, db_name=DB_NAME, db_user=DB_USER,db_pass=DB_PASSWORD,db_host=DB_HOST):
+    def create_connection(self, path):
+        connection = None
+        try:
+            connection = sqlite3.connect(path)
+            print("Connection to SQLite DB successful")
+        except Error as e:
+            print(f"The error '{e}' occurred")
 
-        connection = bd.connect(dbname=db_name,
-                                user=db_user,
-                                password=db_pass,
-                                host=db_host
-                                )
-        self.cursor = connection.cursor()
+        return connection
 
-    def example(self):
-        self.cursor.execute("SELECT * FROM books")
-        rec = tuple(self.cursor.fetchall())
-        self.cursor.close()
-        return rec
-
+    def select_all_from_tables(self, table_name):
+        connection = ControllerForDB.create_connection(self, PATH)
+        cursor = connection.cursor()
+        query = f"select * from {table_name};"
+        try:
+            cursor.execute(query)
+            res = cursor.fetchall()
+            return res
+        except Error as e:
+            print(f"The error '{e}' occurred")
+        finally:
+            if connection:
+                connection.close()
+                print("The SQLite connection is closed")

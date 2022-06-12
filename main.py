@@ -11,6 +11,7 @@ from mainform import Ui_MainWindow as MyWindow
 LOGO_IMAGE_DIRECTORY = "images\\insp.png"
 
 
+
 class WorkWithApplication(QtWidgets.QMainWindow):
 
     def __init__(self):
@@ -29,26 +30,51 @@ class WorkWithApplication(QtWidgets.QMainWindow):
         self.ui.serialsButton.clicked.connect(
             lambda ch, btn=self.ui.serialsButton: self.button_clicked(btn.text()))
 
-
     def button_clicked(self, value):
+        controller = ControllerForDB.ControllerForDB()
         if value == "Books":
             self.ui.pages.setCurrentIndex(2)
+            if self.ui.books_table.rowCount() != 0:
+                self.ui.books_table.setRowCount(0)
+            result = controller.select_all_from_tables('books')
+            row_c = 0
+            for i in result:
+                self.ui.books_table.insertRow(row_c)
+                for j in range(len(i)):
+                    self.ui.books_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                row_c += 1
         elif value == "Films":
             self.ui.pages.setCurrentIndex(3)
+            if self.ui.film_table.rowCount() != 0:
+                self.ui.film_table.setRowCount(0)
+            result = controller.select_all_from_tables('films')
+            row_c = 0
+            for i in result:
+                self.ui.film_table.insertRow(row_c)
+                for j in range(len(i)):
+                    self.ui.film_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                row_c += 1
         else:
             self.ui.pages.setCurrentIndex(1)
+            if self.ui.serials_table.rowCount() != 0:
+                self.ui.serials_table.setRowCount(0)
+            result = controller.select_all_from_tables('serials')
+            row_c = 0
+            for i in result:
+                self.ui.serials_table.insertRow(row_c)
+                for j in range(len(i)):
+                    self.ui.serials_table.setItem(row_c, j, QTableWidgetItem(str(i[j])))
+                row_c += 1
 
+
+
+
+
+# Create application form
 
 app = QtWidgets.QApplication([])
 application = WorkWithApplication()
-contr = ControllerForDB.ControllerForDB()
-contr.ConnectToDB()
-rec = contr.example()
-print(rec)
-application.ui.books_table.insertRow(0)
-for i in range(0, len(rec[0])):
-    application.ui.books_table.setItem(0,i , QTableWidgetItem(str(rec[0][i])))
-    print(str(rec[0][i]))
+
 
 application.show()
 sys.exit(app.exec())
